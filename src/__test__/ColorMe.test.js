@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import ColorMe from '../components/ColorMe';
 
 describe("boundary", () => {
-    test("ColorMe boundary should mount App without crashing", () => {
+    test("ColorMe boundary should mount ColorMe without crashing", () => {
         const { getByPlaceholderText, getByText, getAllByRole } = render(<ColorMe />);
         const input = getByPlaceholderText('Enter a number');
         const button = getByText('Color me');
