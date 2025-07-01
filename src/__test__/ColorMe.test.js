@@ -4,15 +4,15 @@ import '@testing-library/jest-dom/extend-expect';
 import ColorMe from '../components/ColorMe';
 
 describe("boundary", () => {
-    // test("ColorMe boundary should mount ColorMe without crashing", () => {
-    //     const { getByPlaceholderText, getByText, getAllByRole } = render(<ColorMe />);
-    //     const input = getByPlaceholderText('Enter a number');
-    //     const button = getByText('Color me');
-    //     const boxes = getAllByRole('cell');
-    //     expect(input).toBeInTheDocument();
-    //     expect(button).toBeInTheDocument();
-    //     expect(boxes).toHaveLength(9);
-    // });
+    test("ColorMe boundary should mount ColorMe without crashing", () => {
+        const { getByPlaceholderText, getByText, getAllByRole } = render(<ColorMe />);
+        const input = getByPlaceholderText('Enter a number');
+        const button = getByText('Color me');
+        const boxes = getAllByRole('cell');
+        expect(input).toBeInTheDocument();
+        expect(button).toBeInTheDocument();
+        expect(boxes).toHaveLength(9);
+    });
 
     test("ColorMe boundary renders an input type text", () => {
         const { getByPlaceholderText } = render(<ColorMe />);
@@ -32,13 +32,6 @@ describe("boundary", () => {
         const { getByRole } = render(<ColorMe />);
         const table = getByRole("table");
         expect(table).toBeInTheDocument();
-    });
-
-    test("ColorMe boundary renders a table td with value 2", () => {
-        const { getByText } = render(<ColorMe />);
-        const box2 = getByText("2");
-        expect(box2).toBeInTheDocument();
-        expect(box2.tagName).toBe("TD");
     });
 
     test("ColorMe boundary renders a table td with value 2", () => {
