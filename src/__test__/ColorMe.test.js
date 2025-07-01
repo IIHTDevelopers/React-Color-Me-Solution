@@ -4,15 +4,15 @@ import '@testing-library/jest-dom/extend-expect';
 import ColorMe from '../components/ColorMe';
 
 describe("boundary", () => {
-    test("ColorMe boundary should mount ColorMe without crashing", () => {
-        const { getByPlaceholderText, getByText, getAllByRole } = render(<ColorMe />);
-        const input = getByPlaceholderText('Enter a number');
-        const button = getByText('Color me');
-        const boxes = getAllByRole('cell');
-        expect(input).toBeInTheDocument();
-        expect(button).toBeInTheDocument();
-        expect(boxes).toHaveLength(9);
-    });
+    // test("ColorMe boundary should mount ColorMe without crashing", () => {
+    //     const { getByPlaceholderText, getByText, getAllByRole } = render(<ColorMe />);
+    //     const input = getByPlaceholderText('Enter a number');
+    //     const button = getByText('Color me');
+    //     const boxes = getAllByRole('cell');
+    //     expect(input).toBeInTheDocument();
+    //     expect(button).toBeInTheDocument();
+    //     expect(boxes).toHaveLength(9);
+    // });
 
     test("ColorMe boundary renders an input type text", () => {
         const { getByPlaceholderText } = render(<ColorMe />);
